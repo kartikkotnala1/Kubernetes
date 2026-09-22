@@ -1,2 +1,5 @@
 ---
-# handlers file for Kubernetes
+- name: Restart kubelet
+  ansible.builtin.service:
+    name: kubelet
+    state: restarted
