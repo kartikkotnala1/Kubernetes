@@ -1,2 +1,2 @@
 ---
-# defaults file for Kubernetes
+kubernetes_version: "1.32.0"
