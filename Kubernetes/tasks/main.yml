@@ -1,2 +1,10 @@
 ---
-# tasks file for Kubernetes
+- name: Install Kubernetes on Debian family
+  ansible.builtin.include_tasks: debian.yml
+  when: ansible_facts['os_family'] == "Debian"
+
+- name: Enable and start kubelet
+  ansible.builtin.service:
+    name: kubelet
+    enabled: true
+    state: started
