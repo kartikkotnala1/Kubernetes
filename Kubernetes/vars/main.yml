@@ -1,2 +1,8 @@
 ---
-# vars file for Kubernetes
+kubernetes_packages:
+  - kubeadm
+  - kubelet
+  - kubectl
+
+kubernetes_keyring: /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+kubernetes_repo_file: /etc/apt/sources.list.d/kubernetes.list
